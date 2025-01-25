@@ -76,14 +76,13 @@
     document.getElementById("signup-form").addEventListener("submit", async (event) => {
       event.preventDefault(); // Evita el envío por defecto del formulario
       const name = document.getElementById("name").value;
-
+      const formData = new FormData();
+      formData.append("name", name);
+    
       try {
-        const response = await fetch("https://script.google.com/macros/library/d/1j6NLaiiUZ4mbfiYVrPx9HfllsXljEu5GICfYTphPUFqlZWAMMBncYcxh/6", {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbwenPNVags8ZCATnL_R6jOqO3oPC7zNIbIrL-7uEOXLZz21ndcBWklkjdZBd7ro3AOU/exec", {
           method: "POST",
-          body: JSON.stringify({ name }), // Enviamos el nombre en formato JSON
-          headers: {
-            "Content-Type": "application/json",
-          },
+          body: formData,  // Enviamos el nombre en formato JSON
         });
 
         if (response.ok) {
