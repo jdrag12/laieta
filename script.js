@@ -6,11 +6,13 @@ document.getElementById("signup-form").addEventListener("submit", async event =>
   // Obtenim els valors del formulari
   const name = document.getElementById("name").value
   const phone = document.getElementById("phone").value
+  const email = document.getElementById("email").value
 
   // Creem un objecte FormData amb els valors
   const formData = new FormData()
   formData.append("name", name)
   formData.append("phone", phone)
+  if (email) formData.append("email", email)
 
   // Desactivar el botó mentre es processa la sol·licitud
   submitButton.disabled = true

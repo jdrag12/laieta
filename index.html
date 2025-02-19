@@ -16,27 +16,38 @@
     <div class="container">
       <header id="header">
         <div class="profile-section">
-          <img src="assets/images/foto-perfil-Laia.jpeg" alt="Perfil Laia" class="profile-pic" />
+          <img src="assets/images/foto-perfil-Laia.jpg" alt="Perfil Laia" class="profile-pic" />
           <div class="presentation">
-            <h3>Hola, sóc Laia Vizcarro,</h3>
-            <h4>assessora financera associada a</h4>
-            <img src="assets/images/logo-banco.svg" alt="Mediolanum" class="bank-logo" />
+            <h3>Hola! Soc Laia,</h3>
           </div>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus justo nec enim
-          consequat consectetur. Quisque in nibh et nibh faucibus viverra. Nullam sit amet eros sem.
-          Duis magna est, scelerisque et turpis sit amet, blandit porttitor lacus. In odio purus,
-          placerat ut maximus at, vehicula ac erat. Integer malesuada.
-        </p>
+        <div class="text-info">
+          <p>
+            M’agradaria convidar-te a un esdeveniment especial on t’explicaré una gran novetat:
+            Comença la meva carrera professional com a assessora financera exclusiva de Banco
+            Mediolanum al nostre poble.
+          </p>
+          <p>
+            Aquest serà un espai on podràs conèixer de primera mà què significa aquest nou camí per
+            a mi i com puc estar present per a la nostra comunitat en aquest àmbit.
+          </p>
+          <p>
+            M’alegraria molt comptar amb la teva presència en aquest moment tan important per a mi.
+          </p>
+          <p>Reserva la teva plaça i acompanya’ns en aquesta trobada única!</p>
+        </div>
         <div class="event-info">
           <p>
             <img src="assets/images/calendar.svg" alt="calendari" class="icon" />
-            <strong>Quan:</strong> 20 de març, 19:00
+            <strong>Quan:</strong> 21 de març
+          </p>
+          <p>
+            <img src="assets/images/clock.svg" alt="horari" class="icon" />
+            <strong>Horari:</strong> Obertura 19:30 - Inici 20:00
           </p>
           <p>
             <img src="assets/images/map-pin.svg" alt="lloc" class="icon" />
-            <strong>On:</strong> Sala Gran, Barcelona
+            <strong>On:</strong> Església Nova, La Ràpita
           </p>
         </div>
       </header>
@@ -46,14 +57,29 @@
         <h4>Confirma la teva assistència:</h4>
         <form id="signup-form" method="post" action="#">
           <div class="form-group">
-            <input type="text" name="name" id="name" placeholder="Nom" required />
+            <input type="text" name="name" id="name" placeholder="Nom *" required />
           </div>
           <div class="form-group">
-            <input type="tel" name="phone" id="phone" pattern="[0-9]{9}" placeholder="Telèfon" />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              pattern="[0-9]{9}"
+              placeholder="Telèfon *"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Correu electrònic" />
           </div>
           <input type="submit" value="Enviar" />
         </form>
         <p id="confirmation-message"></p>
+      </div>
+
+      <div class="logo-info">
+        <p>Amb la col·laboració de:</p>
+        <img src="assets/images/logo-banco.svg" alt="Mediolanum" class="bank-logo" />
       </div>
 
       <script src="script.js"></script>
