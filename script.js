@@ -6,7 +6,7 @@ document.getElementById("signup-form").addEventListener("submit", async event =>
   // Obtenim els valors del formulari
   const name = document.getElementById("name").value
   const phone = document.getElementById("phone").value
-  const email = document.getElementById("email").value
+  const email = document.getElementById("email").value || "" // Si no hi ha email, enviem una cadena buida
 
   // Creem un objecte FormData amb els valors
   const formData = new FormData()
@@ -23,7 +23,7 @@ document.getElementById("signup-form").addEventListener("submit", async event =>
 
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbwenPNVags8ZCATnL_R6jOqO3oPC7zNIbIrL-7uEOXLZz21ndcBWklkjdZBd7ro3AOU/exec",
+      "https://script.google.com/macros/s/AKfycbzVcVPsDdmbY8mGU0WOUzgrLldTs7ro3j6qHD50VJ69yMblTbIFwHlhzF026sFZTmMhEA/exec ",
       {
         method: "POST",
         body: formData, // Enviem les dades al Google Script
